@@ -1,0 +1,41 @@
+[Version]
+Signature="$Windows NT$"
+Provider="Canon LBP-810 CAPT Project"
+Class=Printer
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+CatalogFile=CanonLBP810.cat
+ClassVer=4.0
+DriverVer=10/24/2026,1.1.0.0
+PnpLockdown=1
+
+[Manufacturer]
+%Manufacturer%=Models,NTamd64.10.0
+
+[Models.NTamd64.10.0]
+%PrinterModel%=Install,USBPRINT\CanonLBP-810AC2D
+
+[Install]
+CopyFiles=DriverFiles
+
+[Install.Services]
+AddService=,%SPSVCINST_ASSOCSERVICE%
+
+[DriverFiles]
+CanonLBP810.xml
+CanonLBP810-manifest.ini
+
+[DestinationDirs]
+DriverFiles=66000
+
+[SourceDisksNames.amd64]
+1=%DiskName%,,,
+
+[SourceDisksFiles]
+CanonLBP810.xml=1
+CanonLBP810-manifest.ini=1
+
+[Strings]
+SPSVCINST_ASSOCSERVICE=0x00000002
+Manufacturer="Canon LBP-810 CAPT Project"
+PrinterModel="Canon LBP-810 CAPT"
+DiskName="Canon LBP-810 CAPT Driver"

@@ -1,0 +1,14 @@
+# CMake build trees
+build/
+build-*/
+
+# Generated and signed by tools/Install-CanonLBP810TestQueue.ps1
+driver-package/*.cat
+
+# IDE
+.vs/
+.vscode/
+*.user
+
+# Local Claude Code settings
+.claude/

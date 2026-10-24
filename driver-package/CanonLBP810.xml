@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PrintDeviceCapabilities xmlns="http://schemas.microsoft.com/windows/2013/12/printing/printschemaframework2"
+                         xmlns:psf2="http://schemas.microsoft.com/windows/2013/12/printing/printschemaframework2"
+                         xmlns:psf="http://schemas.microsoft.com/windows/2003/08/printing/printschemaframework"
+                         xmlns:psk="http://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords"
+                         xmlns:psk12="http://schemas.microsoft.com/windows/2013/12/printing/printschemakeywordsv12"
+                         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         version="2">
+  <psk:JobCopiesAllDocuments psf2:psftype="ParameterDef">
+    <psf:DataType xsi:type="xsd:QName" psf2:psftype="Property">xsd:integer</psf:DataType>
+    <psf:DefaultValue xsi:type="xsd:integer" psf2:psftype="Property">1</psf:DefaultValue>
+    <psf:Mandatory xsi:type="xsd:QName" psf2:psftype="Property">psk:Unconditional</psf:Mandatory>
+    <psf:MaxValue xsi:type="xsd:integer" psf2:psftype="Property">999</psf:MaxValue>
+    <psf:MinValue xsi:type="xsd:integer" psf2:psftype="Property">1</psf:MinValue>
+    <psf:Multiple xsi:type="xsd:integer" psf2:psftype="Property">1</psf:Multiple>
+    <psf:UnitType xsi:type="xsd:string" psf2:psftype="Property">copies</psf:UnitType>
+  </psk:JobCopiesAllDocuments>
+  <psk:PageMediaSize psf2:psftype="Feature">
+    <psk:ISOA4 psf2:psftype="Option" psf2:default="true">
+      <psk12:PortraitImageableSize xsi:type="psf2:ImageableAreaType" psf2:psftype="Property">12700,12700,184600,271600</psk12:PortraitImageableSize>
+      <psk:MediaSizeHeight xsi:type="xsd:integer" psf2:psftype="ScoredProperty">297000</psk:MediaSizeHeight>
+      <psk:MediaSizeWidth xsi:type="xsd:integer" psf2:psftype="ScoredProperty">210000</psk:MediaSizeWidth>
+    </psk:ISOA4>
+  </psk:PageMediaSize>
+  <psk:PageOrientation psf2:psftype="Feature">
+    <psk:Portrait psf2:psftype="Option" psf2:default="true"/>
+    <psk:Landscape psf2:psftype="Option"/>
+  </psk:PageOrientation>
+  <psk:PageResolution psf2:psftype="Feature">
+    <psk:Option600dpi psf2:psftype="Option" psf2:default="true">
+      <psk:ResolutionX xsi:type="xsd:integer" psf2:psftype="ScoredProperty">600</psk:ResolutionX>
+      <psk:ResolutionY xsi:type="xsd:integer" psf2:psftype="ScoredProperty">600</psk:ResolutionY>
+    </psk:Option600dpi>
+  </psk:PageResolution>
+  <psk:PageOutputColor psf2:psftype="Feature">
+    <psk:Monochrome psf2:psftype="Option" psf2:default="true">
+      <psk:DeviceBitsPerPixel xsi:type="xsd:integer" psf2:psftype="ScoredProperty">8</psk:DeviceBitsPerPixel>
+      <psk:DriverBitsPerPixel xsi:type="xsd:integer" psf2:psftype="ScoredProperty">8</psk:DriverBitsPerPixel>
+    </psk:Monochrome>
+  </psk:PageOutputColor>
+  <DocumentFormatOptions>
+    <PwgRasterDocumentTypesSupported>
+      <PwgRasterDocumentType psf2:PageOutputColor="psk:Monochrome">Sgray_8</PwgRasterDocumentType>
+    </PwgRasterDocumentTypesSupported>
+  </DocumentFormatOptions>
+</PrintDeviceCapabilities>
